@@ -26,6 +26,7 @@ function initBoard() {
 }
 
 function shadeKeyBoard(letter, color) {
+    letter = letter.toUpperCase();
   for (const elem of document.getElementsByClassName("keyboard-button")) {
     if (elem.textContent === letter) {
       let oldColor = elem.style.backgroundColor;
@@ -40,6 +41,7 @@ function shadeKeyBoard(letter, color) {
       elem.style.backgroundColor = color;
       break;
     }
+    
   }
 }
 
@@ -71,7 +73,7 @@ function checkGuess() {
     return;
   }
 
-  var letterColor = ["gray", "gray", "gray", "gray", "gray"];
+  var letterColor = ["#3A3A3C", "#3A3A3C", "#3A3A3C", "#3A3A3C", "#3A3A3C"];
 
   //check green
   for (let i = 0; i < 5; i++) {
@@ -104,6 +106,7 @@ function checkGuess() {
       //shade box
       box.style.backgroundColor = letterColor[i];
       shadeKeyBoard(guessString.charAt(i) + "", letterColor[i]);
+      console.log(guessString.charAt(i) + "", letterColor[i]);
     }, delay);
   }
 

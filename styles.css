@@ -74,4 +74,6 @@ h1:after
     text-transform: uppercase;
     background-color: #818384;
     color: #ffffff;
+    border-color: #121213;
+    border-radius: 0.25rem;
   }
