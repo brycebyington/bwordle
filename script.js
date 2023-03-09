@@ -8,6 +8,23 @@ let rightGuessString = WORDS[Math.floor(Math.random() * WORDS.length)];
 
 console.log(rightGuessString);
 
+
+function openSettings() {
+    let menu = document.getElementById("settings-menu");
+    menu.style.visibility = "visible";
+    menu.style.display = "block";
+    console.log("Opened settings menu");
+    return;
+}
+
+function closeSettings() {
+    let menu = document.getElementById("settings-menu");
+    menu.style.visibility = "hidden";
+    menu.style.display = "none";
+    console.log("Closed settings menu");
+    return;
+}
+
 function initBoard() {
   let board = document.getElementById("game-board");
 
@@ -200,4 +217,21 @@ document.getElementById("keyboard-cont").addEventListener("click", (e) => {
   document.dispatchEvent(new KeyboardEvent("keyup", { key: key }));
 });
 
+
 initBoard();
+
+document.getElementById("settings-button").addEventListener("click", (e) => {
+    let menu = document.getElementById("settings-menu");
+    if (menu.style.visibility == "hidden") {
+        openSettings();
+    }
+    else {
+        closeSettings();
+    }
+    
+    return;
+ 
+ 
+ });
+ 
+ 

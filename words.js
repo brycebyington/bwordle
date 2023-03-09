@@ -1,4 +1,5 @@
 export const WORDS = [
+"aireu",
 "aahed",
 "aalii",
 "aargh",

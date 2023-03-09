@@ -77,3 +77,20 @@ h1:after
     border-color: #121213;
     border-radius: 0.25rem;
   }
+
+  #settings-button {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/58/Ic_settings_48px.svg);
+    width: 48px;
+    height: 48px;
+    scale: 1;
+
+  }
+
+  #settings-menu {
+    background-color: white;
+    height: 100px;
+    text-align: center;
+    visibility: collapse;
+    display: none;
+    z-index: 9;
+  }
