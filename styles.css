@@ -82,15 +82,20 @@ h1:after
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/58/Ic_settings_48px.svg);
     width: 48px;
     height: 48px;
-    scale: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    scale: 0.5;
 
   }
 
   #settings-menu {
-    background-color: white;
+    background-color: #121213;
     height: 100px;
+    width: 100px;
     text-align: center;
-    visibility: collapse;
+    visibility: hidden;
     display: none;
-    z-index: 9;
+    position: absolute;
+    
   }

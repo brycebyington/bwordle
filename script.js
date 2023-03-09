@@ -11,16 +11,20 @@ console.log(rightGuessString);
 
 function openSettings() {
     let menu = document.getElementById("settings-menu");
+    let bkg = document.getElementById("body");
     menu.style.visibility = "visible";
     menu.style.display = "block";
+    bkg.style.backgroundColor = "#090909";
     console.log("Opened settings menu");
     return;
 }
 
 function closeSettings() {
     let menu = document.getElementById("settings-menu");
+    let bkg = document.getElementById("body");
     menu.style.visibility = "hidden";
     menu.style.display = "none";
+    bkg.style.backgroundColor = "#121213";
     console.log("Closed settings menu");
     return;
 }
