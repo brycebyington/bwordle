@@ -91,11 +91,16 @@ h1:after
 
   #settings-menu {
     background-color: #121213;
-    height: 100px;
-    width: 100px;
+    height: 15rem;
+    width: 20rem;
     text-align: center;
     visibility: hidden;
-    display: none;
+    margin: 0 auto;
     position: absolute;
-    
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    border-radius: 0.25rem;
+    border-color: #1A1A1B;
   }
+

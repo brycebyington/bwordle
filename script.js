@@ -8,6 +8,12 @@ let rightGuessString = WORDS[Math.floor(Math.random() * WORDS.length)];
 
 console.log(rightGuessString);
 
+function lightMode() {
+    let button = document.getElementById("light-dark-mode");
+    let bkg = document.getElementById("body");
+    let board = document.getElementById("game-board");
+    let keyboard = document.getElementsByClassName("keyboard-button");
+}
 
 function openSettings() {
     let menu = document.getElementById("settings-menu");
