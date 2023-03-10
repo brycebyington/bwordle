@@ -8,11 +8,20 @@ let rightGuessString = WORDS[Math.floor(Math.random() * WORDS.length)];
 
 console.log(rightGuessString);
 
-function lightMode() {
-    let button = document.getElementById("light-dark-mode");
+function displayMode() {
+    let displayModeButton = document.getElementById("light-dark-mode");
+    let settingsOverlay = document.getElementById("settings-menu");
     let bkg = document.getElementById("body");
-    let board = document.getElementById("game-board");
-    let keyboard = document.getElementsByClassName("keyboard-button");
+    let pageTitle = document.getElementById("page-title");
+    bkg.style.backgroundColor = "#FFFFFF";
+    pageTitle.style.color = "#000000";
+    settingsOverlay.style.backgroundColor = "#FFFFFF"
+    settingsOverlay.style.boxShadow = "#EDEDED 1px 1px 15px 10px";
+    for (const elem of document.getElementsByClassName("keyboard-button")) {
+        elem.style.backgroundColor = "#D3D6DA";
+        elem.style.color = "#000000"
+    }
+
 }
 
 function openSettings() {
@@ -20,7 +29,12 @@ function openSettings() {
     let bkg = document.getElementById("body");
     menu.style.visibility = "visible";
     menu.style.display = "block";
-    bkg.style.backgroundColor = "#090909";
+    if (bkg.style.backgroundColor == "#121213") {
+        bkg.style.backgroundColor = "#090909";
+    }
+    if (bkg.style.backgroundColor == "#FFFFFF") {
+        bkg.style.backgroundColor = "#FFFFFF";
+    }
     console.log("Opened settings menu");
     return;
 }
@@ -30,7 +44,12 @@ function closeSettings() {
     let bkg = document.getElementById("body");
     menu.style.visibility = "hidden";
     menu.style.display = "none";
-    bkg.style.backgroundColor = "#121213";
+    if (bkg.style.backgroundColor == "#090909") {
+        bkg.style.backgroundColor = "#121213";
+    }
+    if (bkg.style.backgroundColor == "#FFFFFF") {
+        bkg.style.backgroundColor == "#FFFFFF";
+    }
     console.log("Closed settings menu");
     return;
 }
@@ -242,6 +261,11 @@ document.getElementById("settings-button").addEventListener("click", (e) => {
     return;
  
  
+ });
+
+ document.getElementById("light-dark-mode").addEventListener("click", (e) => {
+    displayMode();
+    return;
  });
  
  
