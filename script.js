@@ -5,14 +5,16 @@ let guessesRemaining = NUMBER_OF_GUESSES;
 let currentGuess = [];
 let nextLetter = 0;
 let rightGuessString = WORDS[Math.floor(Math.random() * WORDS.length)];
+let displayMode = 0;
 
 console.log(rightGuessString);
 
-function displayMode() {
+function lightMode() {
     let displayModeButton = document.getElementById("light-dark-mode");
     let settingsOverlay = document.getElementById("settings-menu");
     let bkg = document.getElementById("body");
     let pageTitle = document.getElementById("page-title");
+
     bkg.style.backgroundColor = "#FFFFFF";
     pageTitle.style.color = "#000000";
     settingsOverlay.style.backgroundColor = "#FFFFFF"
@@ -21,6 +23,27 @@ function displayMode() {
         elem.style.backgroundColor = "#D3D6DA";
         elem.style.color = "#000000"
     }
+
+    return;
+
+}
+
+function darkMode() {
+    let displayModeButton = document.getElementById("light-dark-mode");
+    let settingsOverlay = document.getElementById("settings-menu");
+    let bkg = document.getElementById("body");
+    let pageTitle = document.getElementById("page-title");
+
+    bkg.style.backgroundColor = "#121213";
+    pageTitle.style.color = "#FFFFFF";
+    settingsOverlay.style.backgroundColor = "#121213"
+    settingsOverlay.style.boxShadow = "#080808 1px 1px 15px 10px";
+    for (const elem of document.getElementsByClassName("keyboard-button")) {
+        elem.style.backgroundColor = "#818384";
+        elem.style.color = "#FFFFFF"
+    }
+
+    return;
 
 }
 
@@ -264,7 +287,14 @@ document.getElementById("settings-button").addEventListener("click", (e) => {
  });
 
  document.getElementById("light-dark-mode").addEventListener("click", (e) => {
-    displayMode();
+    if (displayMode == 0) {
+        lightMode();
+        displayMode = 1;
+    }
+    else if (displayMode == 1) {
+        darkMode();
+        displayMode = 0;
+    }
     return;
  });
  
