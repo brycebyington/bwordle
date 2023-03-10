@@ -107,12 +107,12 @@ h1:after
     width: 20rem;
     text-align: center;
     visibility: hidden;
-    margin: 0 auto;
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    top: 50%;
     border-radius: 0.25rem;
     border-color: #1A1A1B;
+    top: 50%;
+    left: 50%;
+    margin-top: -7.5rem;
+    margin-left: -10rem;
   }
 

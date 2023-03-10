@@ -62,6 +62,7 @@ function openSettings() {
     if (bkg.style.backgroundColor == "#FFFFFF") {
         bkg.style.backgroundColor = "#FFFFFF";
     }
+    animateCSS(menu, "fadeInUp");
     console.log("Opened settings menu");
     return;
 }
