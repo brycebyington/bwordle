@@ -14,11 +14,13 @@ function lightMode() {
     let settingsOverlay = document.getElementById("settings-menu");
     let bkg = document.getElementById("body");
     let pageTitle = document.getElementById("page-title");
-
+    let settingsTitle = document.getElementById("settings-title");
     bkg.style.backgroundColor = "#FFFFFF";
     pageTitle.style.color = "#000000";
     settingsOverlay.style.backgroundColor = "#FFFFFF"
     settingsOverlay.style.boxShadow = "#EDEDED 1px 1px 15px 10px";
+    settingsTitle.style.color = "#000000"
+
     for (const elem of document.getElementsByClassName("keyboard-button")) {
         elem.style.backgroundColor = "#D3D6DA";
         elem.style.color = "#000000"
@@ -33,11 +35,13 @@ function darkMode() {
     let settingsOverlay = document.getElementById("settings-menu");
     let bkg = document.getElementById("body");
     let pageTitle = document.getElementById("page-title");
+    let settingsTitle = document.getElementById("settings-title");
 
     bkg.style.backgroundColor = "#121213";
     pageTitle.style.color = "#FFFFFF";
     settingsOverlay.style.backgroundColor = "#121213"
     settingsOverlay.style.boxShadow = "#080808 1px 1px 15px 10px";
+    settingsTitle.style.color = "#FFFFFF"
     for (const elem of document.getElementsByClassName("keyboard-button")) {
         elem.style.backgroundColor = "#818384";
         elem.style.color = "#FFFFFF"
