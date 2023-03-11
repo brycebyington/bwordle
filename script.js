@@ -78,6 +78,7 @@ function closeSettings() {
     if (bkg.style.backgroundColor == "#FFFFFF") {
         bkg.style.backgroundColor == "#FFFFFF";
     }
+    //animateCSS(menu, "fadeOutUp");
     console.log("Closed settings menu");
     return;
 }
