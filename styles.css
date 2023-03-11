@@ -16,15 +16,6 @@ h3 {
     margin-top: 0.25rem;
 }
 
-
-h1:after
-{
-    content:' ';
-    display:block;
-    border:1px solid #3A3A3C;
-    margin-top: 0.5rem;
-}
-
 #game-board {
   display: flex;
   align-items: center;
